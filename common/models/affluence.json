@@ -1,0 +1,32 @@
+{
+  "name": "Affluence",
+  "plural": "affluences",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "db": {
+      "table": "affluence"
+    }
+  },
+  "properties": {
+    "value": {
+      "type": "number",
+      "default": 0
+    },
+    "day": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "movieTheater": {
+      "type": "belongsTo",
+      "model": "MovieTheater",
+      "foreignKey": "movie_theater_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

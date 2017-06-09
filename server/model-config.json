@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "local"
+  },
+  "AccessToken": {
+    "dataSource": "local",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "local",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "local",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "local",
+    "public": false
+  },
+  "MovieTheater": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Affluence": {
+    "dataSource": "db",
+    "public": true
+  }
+}

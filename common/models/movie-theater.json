@@ -1,0 +1,29 @@
+{
+  "name": "MovieTheater",
+  "plural": "movie_theaters",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "db": {
+      "table": "movie_theater"
+    }
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "permission": "ALLOW",
+      "property": "getAverageAffluenceOverPeriod"
+    }
+  ],
+  "methods": {
+  }
+}

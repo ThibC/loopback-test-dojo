@@ -1,0 +1,23 @@
+{
+  "default": "prod",
+
+  "prod": {
+    "driver": "pg",
+    "user": "dojo_prod",
+    "password": "dojo_prod",
+    "host": "localhost",
+    "database": "dojo_prod",
+    "schema": "public"
+  },
+
+  "test": {
+    "driver": "pg",
+    "user": "dojo_test",
+    "password": "dojo_test",
+    "host": "localhost",
+    "database": "dojo_test",
+    "schema": "public"
+  },
+
+  "sql-file" : true
+}
