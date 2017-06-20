@@ -33,16 +33,16 @@ describe('MovieTheater model getAffluenceEvolutionByMonth method', function() {
   });
 
   it('should return the average', function(done) {
-    app.models.MovieTheater.getAverageAffluenceOverPeriod(movieTheaterId, '2017-06-16', '2017-06-20', function(err, res) {
-      expect(err).to.equal(null);
+    app.models.MovieTheater.getAverageAffluenceOverPeriod(movieTheaterId, '2017-06-16', '2017-06-20')
+    .then(function(res) {
       expect(res).to.equal(667);
       done();
     });
   });
 
   it('should return 0', function(done) {
-    app.models.MovieTheater.getAverageAffluenceOverPeriod(0, '2017-06-16', '2017-06-20', function(err, res) {
-      expect(err).to.equal(null);
+    app.models.MovieTheater.getAverageAffluenceOverPeriod(0, '2017-06-16', '2017-06-20')
+    .then(function(res) {
       expect(res).to.equal(0);
       done();
     });
