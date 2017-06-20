@@ -24,7 +24,7 @@
     "movieTheater": {
       "type": "belongsTo",
       "model": "MovieTheater",
-      "foreignKey": "movie_theater_id"
+      "foreignKey": "movieTheaterId"
     }
   },
   "acls": [],
