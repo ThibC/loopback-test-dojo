@@ -47,4 +47,15 @@ describe('MovieTheater model getAffluenceEvolutionByMonth method', function() {
       done();
     });
   });
+
+  it('should return an error', function(done) {
+    sandbox.stub(app.models.Affluence, 'find').callsFake(function(filters) { return Promise.reject('oupsss!'); });
+    app.models.MovieTheater.getAverageAffluenceOverPeriod('yo!', '2017-06-16', '2017-06-20')
+    .then(function() { done('should not been called'); })
+    .catch(function(err) {
+      expect(err).to.eql('oupsss!');
+      done();
+    });
+    ;
+  });
 });
