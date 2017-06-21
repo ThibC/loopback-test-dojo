@@ -5,8 +5,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "server:test": "NODE_ENV=test mocha --timeout 3000 tests/**/*.js",
-    "preserver:test": "sh test/pretest.sh; ./node_modules/db-migrate/bin/db-migrate up -e test"
+    "server:test": "NODE_ENV=test mocha --timeout 3000 tests/**/*.js"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
