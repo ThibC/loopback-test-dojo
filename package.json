@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "start": "node .",
     "server:test": "NODE_ENV=test mocha --timeout 3000 tests/**/*.js",
-    "preserver:test": "sh test/pretest.sh; ./node_modules/db-migrate/bin/db-migrate up -e test"
+    "preserver:test": "sh tests/pretest.sh; ./node_modules/db-migrate/bin/db-migrate up -e test"
   },
   "dependencies": {
     "chai": "^4.0.2",
